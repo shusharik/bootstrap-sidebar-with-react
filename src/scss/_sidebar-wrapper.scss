@@ -1,0 +1,40 @@
+.sidebar-wrapper {
+    width: $sidebar-width;
+    height: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: -$sidebar-width;
+    z-index: 999;
+    transition: left .3s ease, width .3s ease;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    a {
+        text-decoration: none;
+        transition: color .3s ease;
+    }
+
+    .sidebar-item {
+        transition: all .3s linear;
+    }
+
+    .sidebar-content {
+        max-height: calc(100% - #{$sidebar-footer-height});
+        height: calc(100% - #{$sidebar-footer-height});
+        overflow-y: scroll;
+        position: relative;
+
+        &.desktop {
+            overflow-y: hidden;
+        }
+    }
+}
+
+@import "sidebar-header";
+@import "sidebar-menu";
+@import "sidebar-footer";

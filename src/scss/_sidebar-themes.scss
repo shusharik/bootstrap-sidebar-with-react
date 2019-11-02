@@ -1,0 +1,17 @@
+@import "mixin";
+@import "variables";
+
+.default-theme {
+    @include themes($sidebar-bg-color,
+    $primary-color,
+    $primary-highlight-color,
+    $border-color,
+    $submenu-bg-color,
+    $menu-icon-bg-color,
+    $menu-icon-color,
+    $menu-icon-highlight-color,
+    $menu-header-color,
+    $footer-bg-color,
+    $shadow-color,
+    $scrollbar-color);
+}

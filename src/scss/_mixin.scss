@@ -1,0 +1,99 @@
+@mixin themes ($sidebar-bg-color,
+$primary-color,
+$primary-highlight-color,
+$border-color,
+$submenu-bg-color,
+$menu-icon-bg-color,
+$menu-icon-color,
+$menu-icon-highlight-color,
+$menu-header-color,
+$footer-bg-color,
+$shadow-color,
+$scrollbar-color) {
+    .sidebar-wrapper {
+
+        background-color: $sidebar-bg-color;
+
+        > div {
+            height: 100vh;
+        }
+
+        .sidebar-item {
+
+            border-top: 1px solid $border-color;
+            cursor: pointer;
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+
+        a:not(.dropdown-item),
+        .dropdown-button,
+        .sidebar-header {
+            color: $primary-color;
+        }
+
+        a:not(.dropdown-item):hover,
+        .dropdown-button:hover,
+        .sidebar-header > div.dropdown:hover,
+        .sidebar-menu li.active>a {
+            color: $primary-highlight-color;
+        }
+
+        .sidebar-menu li.active>a {
+            font-weight: bold;
+        }
+
+        .sidebar-menu a:hover i,
+        .sidebar-menu li.active > a i{
+            color: $menu-icon-highlight-color;
+            // text-shadow: 0px 0px 10px rgba($menu-icon-highlight-color, .5);
+        }
+
+        .sidebar-menu ul li a i {
+            background-color: $menu-icon-bg-color;
+        }
+
+
+        .sidebar-menu .sidebar-dropdown div {
+            background-color: $submenu-bg-color;
+        }
+
+        .sidebar-menu .header-menu span {
+            color: $menu-header-color;
+        }
+
+        .sidebar-footer {
+            background-color: $footer-bg-color;
+            border-top: 1px solid $border-color;
+        }
+
+        .sidebar-footer>div:first-child {
+            border-left: none;
+        }
+
+        .sidebar-footer>div:last-child {
+            border-right: none;
+        }
+    }
+
+    &.toggled #close-sidebar {
+        color: $primary-color;
+    }
+
+    &.toggled #close-sidebar:hover {
+        color: $primary-highlight-color;
+    }
+
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+    .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+    .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+        background-color: $scrollbar-color;
+        border-radius: 0;
+    }
+
+    .mCSB_scrollTools .mCSB_draggerRail {
+        background-color: transparent;
+    }
+}

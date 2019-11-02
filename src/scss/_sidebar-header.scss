@@ -1,0 +1,58 @@
+.sidebar-wrapper {
+
+    .sidebar-header {
+        padding: 20px;
+        overflow: visible;
+
+        div.dropdown {
+            transition: color .3s ease;
+        }
+
+        .dropdown-menu.show {
+            left: 5px!important;
+            right: -44px;
+            font-size: .9rem;
+            line-height: 35px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .user-pic {
+            width: 60px;
+            padding: 2px;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .user-info {
+            overflow: hidden;
+            margin-left: 10px;
+
+            >span {
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .user-role {
+                font-size: 12px;
+            }
+
+            .user-status {
+                font-size: 11px;
+                margin-top: 4px;
+
+                .fa-icon {
+                    margin-right: 6px;
+                    color: #007BFF;
+                }
+            }
+        }
+
+    }
+}

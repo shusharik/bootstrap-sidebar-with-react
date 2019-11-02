@@ -1,0 +1,135 @@
+@import 'variables';
+
+.sidebar-wrapper {
+
+    .sidebar-footer {
+
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+
+        > div:not(.dropdown-button),
+        div.dropdown-button,
+        div.dropdown-button > a {
+            flex-grow: 1;
+            text-align: center;
+            height: $sidebar-footer-height;
+            line-height: $sidebar-footer-height;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            .badge.notification {
+                background-color: $menu-icon-highlight-color;
+                position: absolute;
+                top: 0px;
+                margin-left: 16px;
+                color: $primary-highlight-color;
+            }
+        }
+
+        > div:not(.dropdown-button) {
+            position: static;
+
+            &.pinned-footer {
+                display: none;
+            }
+        }
+
+        .dropdown-menu {
+            bottom: 36px;
+            left: 0 !important;
+            top: initial !important;
+            right: 0;
+            transform: none !important;
+            border-radius: 0;
+            font-size: .9rem;
+        }
+
+        .messages {
+            .dropdown-item {
+                padding: .25rem 1rem;
+            }
+
+            .messages-header {
+                padding: 0 1rem;
+            }
+
+            .message-content {
+                display: flex;
+
+                .pic {
+                    width: 40px;
+                    height: 40px;
+                    overflow: hidden;
+
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+
+                .content {
+                    line-height: 1.6;
+                    padding-left: 5px;
+                    width: calc(100% - 40px);
+
+                    .message-title {
+                        font-size: 13px;
+                    }
+
+                    .message-detail {
+                        font-size: 12px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                }
+            }
+
+        }
+
+        .notifications {
+            .dropdown-item {
+                padding: .25rem 1rem;
+            }
+
+            .notifications-header {
+                padding: 0 1rem;
+            }
+
+            .notification-content {
+                display: flex;
+
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .content {
+                    line-height: 1.6;
+                    padding-left: 5px;
+                    width: calc(100% - 40px);
+
+                    .notification-time {
+                        font-size: .7rem;
+                        color: #828282;
+                    }
+
+                    .notification-detail {
+                        font-size: 12px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+}

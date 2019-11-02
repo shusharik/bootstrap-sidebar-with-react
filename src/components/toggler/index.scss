@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+
+.sidebar-toggle-button {
+  position: absolute;
+  right: -32px;
+  padding: 3px 8px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: $sidebar-bg-color !important;
+  color: $menu-icon-color;
+
+  span {
+    margin-top: -4px;
+    display: block;
+  }
+
+  &:hover {
+    color: $primary-highlight-color;
+    background-color: $sidebar-bg-color;
+    transition: color .3s ease;
+  }
+}
